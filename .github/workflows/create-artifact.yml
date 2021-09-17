@@ -1,0 +1,21 @@
+name: create-artifact
+
+on: [push]
+
+env:
+  ARTIFACT_NAME: my-github-action-artifact
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Check out code
+      uses: actions/checkout@v1
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: ${{ env.ARTIFACT_NAME }}
+        path: ./${{ env.ARTIFACT_NAME }}

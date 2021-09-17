@@ -4,3 +4,4 @@
 2. Using an action from a GitHub repo
 3. Working with environment variables in actions
 4. Using secrets in actions. Tutorial uses AWS actions but I have chosen to use Digital Ocean's GitHub actions.
+5. Using my custom action
